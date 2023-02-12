@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Comic';
+  src: url('../fonts/comic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TT Lakes Black';
+  font-style: normal;
+  font-weight: 900;
+  src: local('TT Lakes Black'), local('TTLakes-Black'),
+    url('../fonts/TTLakes-Black.eot') format('embedded-opentype'),
+    url('../fonts/TTLakes-Black.woff') format('woff'),
+    url('../fonts/TTLakes-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  font-style: normal;
+  font-weight: normal;
+  src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+    url('../fonts/TTLakes-Black.eot') format('embedded-opentype'),
+    url('../fonts/TTLakes-Regular.woff') format('woff'),
+    url('../fonts/TTLakes-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TT Lakes Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+    url('../fonts/TTLakes-Bold.eot') format('embedded-opentype'),
+    url('../fonts/TTLakes-Bold.woff') format('woff'),
+    url('../fonts/TTLakes-Bold.ttf') format('truetype');
+}
+
+@import '../scss/content.scss';
+@import '../scss/menu.scss';
+@import '../scss/windows.scss';
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  // width: 490vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}

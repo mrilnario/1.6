@@ -1,0 +1,245 @@
+$menuColor: #ffffff;
+$tableMenuColor: #1b1c21;
+$tableMenuColorActive: #7e7e82;
+$boxShadowOne: rgba(14, 24, 80, 0.2);
+$boxShadowTwo: rgba(69, 79, 126, 0.02);
+
+.menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding-top: 18.73px;
+  width: 0px;
+  opacity: 0;
+  height: 676px;
+  box-shadow: 16px 0px 52px 0px $boxShadowOne, -2px 0px 4px 0px $boxShadowTwo;
+  transition: 0.1s ease-in;
+  background-color: $menuColor;
+}
+
+.menu div,
+.menu p,
+.menu button,
+.menu a {
+  opacity: 0;
+}
+
+.active {
+  width: 320px;
+  // transform: translateX(0px);
+  transition: 0.5s ease-in;
+  z-index: 3;
+  opacity: 1;
+}
+
+.active div,
+p,
+button,
+a {
+  opacity: 1 !important;
+  transition: 1s;
+}
+
+p {
+  font-family: 'TT Lakes', 'TT Lakes Bold', 'Lucida Grande', 'Lucida Sans',
+    Arial, sans-serif;
+}
+
+.icons-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.icons-top div {
+  display: flex;
+  width: 48%;
+  justify-content: space-between;
+}
+
+.icons-top a {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+}
+
+.table-menu {
+  font-family: 'TT Lakes', 'TT Lakes Bold', 'Lucida Grande', 'Lucida Sans',
+    Arial, sans-serif;
+  color: $menuColor;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  margin-top: 22px;
+  margin-bottom: 8px;
+}
+
+.table-menu a {
+  display: flex;
+  margin-bottom: 18px;
+  height: 32px;
+  align-items: center;
+  text-decoration: none;
+  color: $tableMenuColor;
+}
+
+.table-menu p {
+  padding-left: 24px;
+}
+
+.table-menu a:hover {
+  color: $tableMenuColorActive;
+  background-image: url('../img/highlight.svg');
+  background-position: 0%;
+  background-repeat: no-repeat;
+  transition: 0.2s;
+}
+
+.table-menu a:focus {
+  color: $tableMenuColorActive;
+  background-image: url('../img/highlight.svg');
+  background-position: 0%;
+  background-repeat: no-repeat;
+  transition: 0.2s;
+}
+
+.icons-down {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  padding-left: 24px;
+}
+
+.contact {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-weight: bold;
+  padding-left: 24px;
+}
+
+.contact a {
+  text-decoration: none;
+  color: $tableMenuColor;
+}
+
+p[phone] {
+  font-family: 'TT Lakes Bold', 'TT Lakes', 'Lucida Grande', 'Lucida Sans',
+    Arial, sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  margin: 0 0 8px 0;
+}
+
+.lang {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 24px;
+}
+
+.lang_box {
+  display: flex;
+  margin-right: 7px;
+}
+
+.lang_box input[type='radio'] {
+  display: none;
+}
+
+.lang_box label {
+  font-weight: bold;
+  background-color: $menuColor;
+  font-family: 'TT Lakes', 'TT Lakes Bold', 'Lucida Grande', 'Lucida Sans',
+    Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  cursor: pointer;
+}
+
+.lang_box input[type='radio']:checked + label {
+  color: $tableMenuColorActive;
+}
+
+.lang_box label:hover {
+  color: $tableMenuColorActive;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    position: fixed;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: auto;
+  }
+
+  .menu::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+  .table-menu {
+    margin-top: 46px;
+    margin-bottom: 244px;
+  }
+
+  .table-menu a {
+    margin-bottom: 18px;
+  }
+
+  .icons-down {
+    width: 44%;
+  }
+
+  .contact {
+    margin-bottom: 16px;
+  }
+
+  p[phone] {
+    font-family: 'TT Lakes Bold', 'TT Lakes', 'Lucida Grande', 'Lucida Sans',
+      Arial, sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    margin: 0 0 40px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .menu {
+    position: absolute;
+    width: 306px;
+    height: 1024px;
+    transform: translateX(0px);
+    opacity: 1;
+    // transition: 0.01s;
+    z-index: 3;
+  }
+
+  .menu div,
+  .menu p,
+  .menu button,
+  .menu a {
+    opacity: 1;
+  }
+
+  .table-menu a {
+    opacity: 1;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .close {
+    display: none;
+  }
+}
